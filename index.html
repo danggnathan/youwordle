@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="valen.css">
+    <script defer src="valen.js"></script>
+</head>
+<body>
+    <h1 id="title">Misty's Wordle!</h1>
+    <hr>
+    <br>
+    <div id="board">
+        <!-- Example row of tiles -->
+        <div class="row">
+            <span class="heart left">❤️</span>
+            <div class="tile">A</div>
+            <span class="heart right">❤️</span>
+            <div class="tile">B</div>
+            <span class="heart right">❤️</span>
+            <!-- Repeat for other tiles in this row -->
+        </div>
+        <!-- Add more rows dynamically via JavaScript -->
+    </div>
+    <br>
+    <h1 id="answer"></h1>
+    <div id="keyboard">
+        <div class="keyboard-row">
+            <div class="key-tile">Q</div>
+            <div class="key-tile">W</div>
+            <div class="key-tile">E</div>
+            <div class="key-tile">R</div>
+            <div class="key-tile">T</div>
+            <div class="key-tile">Y</div>
+            <div class="key-tile">U</div>
+            <div class="key-tile">I</div>
+            <div class="key-tile">O</div>
+            <div class="key-tile">P</div>
+        </div>
+        <div class="keyboard-row">
+            <div class="key-tile">A</div>
+            <div class="key-tile">S</div>
+            <div class="key-tile">D</div>
+            <div class="key-tile">F</div>
+            <div class="key-tile">G</div>
+            <div class="key-tile">H</div>
+            <div class="key-tile">J</div>
+            <div class="key-tile">K</div>
+            <div class="key-tile">L</div>
+        </div>
+        <div class="keyboard-row">
+            <div class="enter-key-tile">ENTER</div>
+            <div class="key-tile">Z</div>
+            <div class="key-tile">X</div>
+            <div class="key-tile">C</div>
+            <div class="key-tile">V</div>
+            <div class="key-tile">B</div>
+            <div class="key-tile">N</div>
+            <div class="key-tile">M</div>
+            <div class="key-tile">⌫</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #FFC0CB; /* Light pink background for the whole page */
+}
+
+hr {
+    width: 500px;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #D5006D; /* Dark pink text for the title */
+}
+
+#board {
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #FFB6C1; /* Soft pink background for tiles */
+}
+
+/* Color updates for correct, present, and absent tiles */
+.correct {
+    background-color: #6AAA64; /* Green for correct position */
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458; /* Yellow for right letter, wrong place */
+    color: white;
+    border-color: white;
+}
+
+.absent {
+    background-color:#787C7E; /* Gray for wrong letters */
+    color: white;
+    border-color: white;
+}
+
+/* Styling for the hearts */
+.heart {
+    font-size: 24px; /* Adjust the size of the hearts */
+    display: inline-block;
+    vertical-align: middle;
+    color: #D5006D; /* Dark pink color for the hearts */
+}
+
+.left {
+    margin-right: 5px; /* Space between the left heart and the tile */
+}
+
+.right {
+    margin-left: 5px; /* Space between the right heart and the tile */
+}
+
+/* Optional: Add hover effect for hearts */
+.heart:hover {
+    color: #FF1493; /* Change color on hover */
+}
+.cat-gif {
+    pointer-events: none; /* Prevents interfering with gameplay */
+    animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@media (max-width: 600px) {
+    #title {
+        font-size: 24px;
+    }
+
+    .tile {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .cat-gif {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* On-screen Keyboard */
+#keyboard {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.keyboard-row {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Space between keys */
+    margin-bottom: 5px; /* Space between rows */
+}
+
+.key-tile, .enter-key-tile {
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 8px; /* Soft edges */
+    background-color: #FFB6C1; /* Pink background */
+    color: black; /* Bold black text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select: none; /* Prevent text selection */
+}
+
+.key-tile {
+    width: 36px;
+}
+
+.enter-key-tile {
+    width: 76px;
+}
+
+/* Hover effect */
+.key-tile:hover, .enter-key-tile:hover {
+    background-color: #FF69B4; /* Brighter pink on hover */
+}
+
+/* Active effect */
+.key-tile:active, .enter-key-tile:active {
+    background-color: #D5006D; /* Darker pink on click */
+}
